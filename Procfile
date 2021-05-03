@@ -1,0 +1,1 @@
+web: gunicorn marv_char:app --preload --timeout 60 

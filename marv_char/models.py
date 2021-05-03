@@ -55,10 +55,10 @@ class User(db.Model,UserMixin):
 
 
 class Character(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.String, primary_key = True)
     name = db.Column(db.String(150))
     description = db.Column(db.String(200), nullable = True)
-    comics_appeared_in = db.Column(db.Integer)
+    comics_appeared_in = db.Column(db.String(200))
     super_power = db.Column(db.String(200))
     date_created = date_created = db.Column(db.DateTime, nullable = False, default = datetime.utcnow)
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable = False)
